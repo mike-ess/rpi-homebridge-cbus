@@ -16,7 +16,7 @@ For more information, please refer to (http://unlicense.org/)
 
 This repository does not contain a copy of the Homebridge software, but it is used to build a Docker image that does contain the Homebridge software installed. 
 
-Homebridge is licensed under the Apackhe Licence 2.0.
+Homebridge is licensed under the Apache Licence 2.0.
 
 For more information, please refer to (https://github.com/nfarina/homebridge/blob/master/LICENSE)
 
