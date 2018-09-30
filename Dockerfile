@@ -27,7 +27,7 @@ COPY homebridge.sh /root/.homebridge
 RUN chmod 755 /root/.homebridge/homebridge.sh
 
 # Proper Entrypoint
-#ENTRYPOINT ["/root/.homebridge/homebridge.sh"]
+ENTRYPOINT ["/root/.homebridge/homebridge.sh"]
 
 # Debugging Entrypoint
-ENTRYPOINT ["bash"]
+#ENTRYPOINT ["bash"]
