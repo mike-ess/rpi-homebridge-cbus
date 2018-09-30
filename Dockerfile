@@ -21,9 +21,13 @@ RUN apt-get install -y libavahi-compat-libdnssd-dev
 RUN npm install -y -g --unsafe-perm homebridge
 RUN npm install -y -g homebridge-cbus
 
-#CMD ["service dbus start && service avahi-daemon start"]
-#ENTRYPOINT ["homebridge"]
+# Install Script for Starting Homebridge
+WORKDIR /root/.homebridge
+COPY homebridge.sh /root/.homebridge
+RUN chmod 755 /root/.homebridge/homebridge.sh
+
+# Proper Entrypoint
+#ENTRYPOINT ["/root/.homebridge/homebridge.sh"]
 
 # Debugging Entrypoint
 ENTRYPOINT ["bash"]
-
