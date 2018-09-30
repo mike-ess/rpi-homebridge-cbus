@@ -22,12 +22,12 @@ RUN npm install -y -g --unsafe-perm homebridge
 RUN npm install -y -g homebridge-cbus
 
 # Install Script for Starting Homebridge
-WORKDIR /root/.homebridge
-COPY homebridge.sh /root/.homebridge
-RUN chmod 755 /root/.homebridge/homebridge.sh
+WORKDIR /root/
+COPY homebridge.sh /root/
+RUN chmod 755 /root/homebridge.sh
 
 # Proper Entrypoint
-ENTRYPOINT ["/root/.homebridge/homebridge.sh"]
+ENTRYPOINT ["/root/homebridge.sh"]
 
 # Debugging Entrypoint
 #ENTRYPOINT ["bash"]
